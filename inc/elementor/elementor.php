@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // get posts dropdown
-function amar_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'post_title') {
+function tomar_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'post_title') {
   $options = [];
   $posts = get_posts($args);
   foreach ((array) $posts as $term) {
@@ -12,22 +12,22 @@ function amar_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'po
   return $options;
 }
 
-function amar_add_elementor_widget_categories( $elements_manager ) {
+function tomar_add_elementor_widget_categories( $elements_manager ) {
 
 	$elements_manager->add_category(
-		'amar-elements',
+		'tomar-elements',
 		[
-			'title' => esc_html__( 'amar Elements', 'amar' ),
+			'title' => esc_html__( 'tomar Elements', 'tomar' ),
 			'icon' => 'fa fa-plug',
 		]
 	);
 
 }
-add_action( 'elementor/elements/categories_registered', 'amar_add_elementor_widget_categories' );
+add_action( 'elementor/elements/categories_registered', 'tomar_add_elementor_widget_categories' );
 
 //Elementor init
 
-class amar_ElementorCustomElement {
+class tomar_ElementorCustomElement {
  
    private static $instance = null;
  
@@ -65,4 +65,4 @@ class amar_ElementorCustomElement {
 
 }
  
-amar_ElementorCustomElement::get_instance()->init();
+tomar_ElementorCustomElement::get_instance()->init();

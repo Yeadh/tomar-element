@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // portfolio
-class amar_Widget_Portfolio extends Widget_Base {
+class tomar_Widget_Portfolio extends Widget_Base {
  
    public function get_name() {
       return 'portfolio';
    }
  
    public function get_title() {
-      return esc_html__( 'Portfolio', 'amar' );
+      return esc_html__( 'Portfolio', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_Portfolio extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_Portfolio extends Widget_Base {
       $this->start_controls_section(
          'portfolio_section',
          [
-            'label' => esc_html__( 'Portfolio', 'amar' ),
+            'label' => esc_html__( 'Portfolio', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,12 +35,12 @@ class amar_Widget_Portfolio extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Style', 'amar' ),
+            'label' => __( 'Style', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'slider',
             'options' => [
-               'slider'  => __( 'Slider', 'amar' ),
-               'masonry' => __( 'Masonry', 'amar' )
+               'slider'  => __( 'Slider', 'tomar' ),
+               'masonry' => __( 'Masonry', 'tomar' )
             ],
          ]
       );
@@ -48,7 +48,7 @@ class amar_Widget_Portfolio extends Widget_Base {
       $this->add_control(
          'sub-title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'CASE STUDIES',
          ]
@@ -57,7 +57,7 @@ class amar_Widget_Portfolio extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Latest portfolios',
          ]
@@ -66,7 +66,7 @@ class amar_Widget_Portfolio extends Widget_Base {
       $this->add_control(
          'deacription',
          [
-            'label' => __( 'Deacription', 'amar' ),
+            'label' => __( 'Deacription', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Lorem ipsum dolor sit amet, consectetur sicing elit, sed do eiusmod tempor incidid ut labore et dolore',
          ]
@@ -75,7 +75,7 @@ class amar_Widget_Portfolio extends Widget_Base {
       $this->add_control(
          'ppp',
          [
-            'label' => __( 'Number of Portfolio', 'amar' ),
+            'label' => __( 'Number of Portfolio', 'tomar' ),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                'no' => [
@@ -119,7 +119,7 @@ class amar_Widget_Portfolio extends Widget_Base {
             ?>
 
             <div class="portfolio-item">
-                <?php the_post_thumbnail( 'amar-475-540' ) ?>
+                <?php the_post_thumbnail( 'tomar-475-540' ) ?>
                 <span><?php foreach ($portfolio_terms as $portfolio_term) { echo esc_attr( $portfolio_term->name ); } ?></span>
                 <a href="<?php the_permalink(); ?>"><h5><?php echo wp_trim_words( get_the_title(), 3, '...' );?></h5></a>
             </div>
@@ -131,4 +131,4 @@ class amar_Widget_Portfolio extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Portfolio );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Portfolio );

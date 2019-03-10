@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // team
-class amar_Widget_Team extends Widget_Base {
+class tomar_Widget_Team extends Widget_Base {
  
    public function get_name() {
       return 'team';
    }
  
    public function get_title() {
-      return esc_html__( 'Team', 'amar' );
+      return esc_html__( 'Team', 'tomar' );
    }
  
    public function get_icon() { 
@@ -18,13 +18,13 @@ class amar_Widget_Team extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'service_section',
          [
-            'label' => esc_html__( 'Team', 'amar' ),
+            'label' => esc_html__( 'Team', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -32,7 +32,7 @@ class amar_Widget_Team extends Widget_Base {
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose photo', 'amar' ),
+            'label' => __( 'Choose photo', 'tomar' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -43,7 +43,7 @@ class amar_Widget_Team extends Widget_Base {
       $this->add_control(
          'name',
          [
-            'label' => __( 'Name', 'amar' ),
+            'label' => __( 'Name', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Pailsabis Tony',
          ]
@@ -51,7 +51,7 @@ class amar_Widget_Team extends Widget_Base {
       $this->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'amar' ),
+            'label' => __( 'Designation', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Company Director',
          ]
@@ -60,7 +60,7 @@ class amar_Widget_Team extends Widget_Base {
 
       $repeater->add_control(
          'social_icon', [
-            'label' => __( 'Social Icon', 'amar' ),
+            'label' => __( 'Social Icon', 'tomar' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'label_block' => true,
             'default' => 'fa fa-facebook',
@@ -68,7 +68,7 @@ class amar_Widget_Team extends Widget_Base {
       );
       $repeater->add_control(
          'social_url', [
-            'label' => __( 'Socia URL', 'amar' ),
+            'label' => __( 'Socia URL', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'label_block' => true,
          ]
@@ -76,7 +76,7 @@ class amar_Widget_Team extends Widget_Base {
       $this->add_control(
          'social_media',
          [
-            'label' => __( 'social profile', 'amar' ),
+            'label' => __( 'social profile', 'tomar' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => 'Social Item',
@@ -106,7 +106,7 @@ class amar_Widget_Team extends Widget_Base {
       $this->add_inline_editing_attributes( 'social_url', 'basic' );
       ?>
       <div class="team">
-         <?php echo wp_get_attachment_image( $settings['image']['id'], 'amar-370x350' ); ?>
+         <?php echo wp_get_attachment_image( $settings['image']['id'], 'tomar-370x350' ); ?>
 
          <div class="team-content">
             <h5 <?php echo $this->get_render_attribute_string( 'name' ); ?>><?php echo esc_html($settings['name']); ?></h5>
@@ -124,4 +124,4 @@ class amar_Widget_Team extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Team );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Team );

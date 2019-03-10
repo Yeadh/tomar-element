@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
-class amar_Widget_Service extends Widget_Base {
+class tomar_Widget_Service extends Widget_Base {
  
    public function get_name() {
       return 'service item';
    }
  
    public function get_title() {
-      return esc_html__( 'Service Item', 'amar' );
+      return esc_html__( 'Service Item', 'tomar' );
    }
  
    public function get_icon() { 
@@ -18,20 +18,20 @@ class amar_Widget_Service extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'service_section',
          [
-            'label' => esc_html__( 'Service Item', 'amar' ),
+            'label' => esc_html__( 'Service Item', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'amar' ),
+            'label' => __( 'Icon', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'flaticon-pencil-case',    
          ]     
@@ -40,30 +40,30 @@ class amar_Widget_Service extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Design','amar'),
+            'default' => __('Design','tomar'),
          ]
       );
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'amar' ),
+            'label' => __( 'Text', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','amar'),
+            'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','tomar'),
          ]
       );
 
       $this->add_control(
          'style',
          [
-            'label' => __( 'Style', 'amar' ),
+            'label' => __( 'Style', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style-1',
             'options' => [
-               'style-1'  => __( 'Style 1', 'amar' ),
-               'style-2' => __( 'Style 2', 'amar' ),
-               'style-3' => __( 'Style 3', 'amar' )
+               'style-1'  => __( 'Style 1', 'tomar' ),
+               'style-2' => __( 'Style 2', 'tomar' ),
+               'style-3' => __( 'Style 3', 'tomar' )
             ],
          ]
       );
@@ -105,4 +105,4 @@ class amar_Widget_Service extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Service );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Service );

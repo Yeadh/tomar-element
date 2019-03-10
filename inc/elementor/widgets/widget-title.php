@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class amar_Widget_Title extends Widget_Base {
+class tomar_Widget_Title extends Widget_Base {
  
    public function get_name() {
       return 'title';
    }
  
    public function get_title() {
-      return esc_html__( 'Title', 'amar' );
+      return esc_html__( 'Title', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_Title extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_Title extends Widget_Base {
       $this->start_controls_section(
          'title_section',
          [
-            'label' => esc_html__( 'Title', 'amar' ),
+            'label' => esc_html__( 'Title', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,13 +35,13 @@ class amar_Widget_Title extends Widget_Base {
       $this->add_control(
          'align',
          [
-            'label' => __( 'Align', 'amar' ),
+            'label' => __( 'Align', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'left',
             'options' => [
-               'center'  => __( 'Center', 'amar' ),
-               'left' => __( 'Left', 'amar' ),
-               'right' => __( 'Right', 'amar' )
+               'center'  => __( 'Center', 'tomar' ),
+               'left' => __( 'Left', 'tomar' ),
+               'right' => __( 'Right', 'tomar' )
             ],
          ]
       );
@@ -50,28 +50,28 @@ class amar_Widget_Title extends Widget_Base {
       $this->add_control(
          'sub-title',
          [
-            'label' => __( 'Sub Title', 'amar' ),
+            'label' => __( 'Sub Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Works','amar')
+            'default' => __('Works','tomar')
          ]
       );
 
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Latest portfolio','amar')
+            'default' => __('Latest portfolio','tomar')
          ]
       );
 
       $this->add_control(
          'border',
          [
-            'label' => __( 'Border Bottom', 'amar' ),
+            'label' => __( 'Border Bottom', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'amar' ),
-            'label_off' => __( 'Off', 'amar' ),
+            'label_on' => __( 'On', 'tomar' ),
+            'label_off' => __( 'Off', 'tomar' ),
             'return_value' => 'yes',
             'default' => 'no',
    
@@ -81,10 +81,10 @@ class amar_Widget_Title extends Widget_Base {
       $this->add_control(
          'white-color',
          [
-            'label' => __( 'Enable if Background is Colored', 'amar' ),
+            'label' => __( 'Enable if Background is Colored', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'amar' ),
-            'label_off' => __( 'Off', 'amar' ),
+            'label_on' => __( 'On', 'tomar' ),
+            'label_off' => __( 'Off', 'tomar' ),
             'return_value' => 'yes',
             'default' => 'no',
    
@@ -126,4 +126,4 @@ class amar_Widget_Title extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Title );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Title );

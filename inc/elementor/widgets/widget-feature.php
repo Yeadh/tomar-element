@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
-class amar_Widget_Feature extends Widget_Base {
+class tomar_Widget_Feature extends Widget_Base {
  
    public function get_name() {
       return 'feature';
    }
  
    public function get_title() {
-      return esc_html__( 'Feature', 'amar' );
+      return esc_html__( 'Feature', 'tomar' );
    }
  
    public function get_icon() { 
@@ -18,20 +18,20 @@ class amar_Widget_Feature extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'service_section',
          [
-            'label' => esc_html__( 'Feature', 'amar' ),
+            'label' => esc_html__( 'Feature', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'amar' ),
+            'label' => __( 'Icon', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'flaticon-pencil-case',    
          ]     
@@ -40,17 +40,17 @@ class amar_Widget_Feature extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Increase business 3x speed','amar'),
+            'default' => __('Increase business 3x speed','tomar'),
          ]
       );
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'amar' ),
+            'label' => __( 'Text', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt','amar'),
+            'default' => __('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt','tomar'),
          ]
       );
       
@@ -82,4 +82,4 @@ class amar_Widget_Feature extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Feature );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Feature );

@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class amar_Widget_Testimonials extends Widget_Base {
+class tomar_Widget_Testimonials extends Widget_Base {
  
    public function get_name() {
       return 'testimonials';
    }
  
    public function get_title() {
-      return esc_html__( 'Testimonials', 'amar' );
+      return esc_html__( 'Testimonials', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_Testimonials extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_Testimonials extends Widget_Base {
       $this->start_controls_section(
          'title_section',
          [
-            'label' => esc_html__( 'Testimonials', 'amar' ),
+            'label' => esc_html__( 'Testimonials', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,12 +35,12 @@ class amar_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Style', 'amar' ),
+            'label' => __( 'Style', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'fullwidth',
             'options' => [
-               'fullwidth'  => __( 'Full Width', 'amar' ),
-               'twocolumn' => __( 'Two Column', 'amar' )
+               'fullwidth'  => __( 'Full Width', 'tomar' ),
+               'twocolumn' => __( 'Two Column', 'tomar' )
             ],
          ]
       );
@@ -50,7 +50,7 @@ class amar_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'amar' ),
+            'label' => __( 'Choose Photo', 'tomar' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -61,7 +61,7 @@ class amar_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'name',
          [
-            'label' => __( 'Name', 'amar' ),
+            'label' => __( 'Name', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             
          ]
@@ -70,7 +70,7 @@ class amar_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'amar' ),
+            'label' => __( 'Designation', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -78,7 +78,7 @@ class amar_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'testimonial',
          [
-            'label' => __( 'Testimonial', 'amar' ),
+            'label' => __( 'Testimonial', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
@@ -86,7 +86,7 @@ class amar_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'testimonial_list',
          [
-            'label' => __( 'Testimonial List', 'amar' ),
+            'label' => __( 'Testimonial List', 'tomar' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => 'testimonial_list',
@@ -146,4 +146,4 @@ class amar_Widget_Testimonials extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Testimonials );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Testimonials );

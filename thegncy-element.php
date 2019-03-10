@@ -1,12 +1,12 @@
 <?php
 /**
-* Plugin Name: Amar Element
-* Plugin URI: https://github.com/amar/amar-plugin
-* Description: After install the amar WordPress Theme, you must need to install this "amar Element" first to get all functions of amar WP Theme.
+* Plugin Name: tomar Element
+* Plugin URI: https://github.com/tomar/tomar-plugin
+* Description: After install the tomar WordPress Theme, you must need to install this "tomar Element" first to get all functions of tomar WP Theme.
 * Version: 1.0.0
 * Author: BusinessTheme
 * Author URI: http://themeforest.net/user/business-theme
-* Text Domain: amar
+* Text Domain: tomar
 * License: GPL/GNU.
 */
 

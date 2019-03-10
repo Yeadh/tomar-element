@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
-class amar_Widget_Blog extends Widget_Base {
+class tomar_Widget_Blog extends Widget_Base {
  
    public function get_name() {
       return 'blog';
    }
  
    public function get_title() {
-      return esc_html__( 'Latest Blog', 'amar' );
+      return esc_html__( 'Latest Blog', 'tomar' );
    }
  
    public function get_icon() { 
@@ -18,25 +18,25 @@ class amar_Widget_Blog extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'blog_section',
          [
-            'label' => esc_html__( 'Blog', 'amar' ),
+            'label' => esc_html__( 'Blog', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'order',
          [
-            'label' => __( 'Order', 'amar' ),
+            'label' => __( 'Order', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'ASC',
             'options' => [
-               'ASC'  => __( 'Ascending', 'amar' ),
-               'DESC' => __( 'Descending', 'amar' )
+               'ASC'  => __( 'Ascending', 'tomar' ),
+               'DESC' => __( 'Descending', 'tomar' )
             ],
          ]
       );
@@ -69,7 +69,7 @@ class amar_Widget_Blog extends Widget_Base {
                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-duration="2.5s">
                   <div class="blog-item-shape">
                      <div class="blog-item-shape-img">
-                        <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'amar-1280-853'); ?>" alt="<?php the_title() ?>">
+                        <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'tomar-1280-853'); ?>" alt="<?php the_title() ?>">
                         <span class="date">28 Dec</span>
                      </div>
                      <div class="blog-item-shape-content">
@@ -79,7 +79,7 @@ class amar_Widget_Blog extends Widget_Base {
                               Tags: <?php the_tags( ' ', ', ',' ') ?>
                            </li>
                            <li class="list-inline-item float-right">
-                              Read: <?php echo amargetPostViews(get_the_ID()); ?>
+                              Read: <?php echo tomargetPostViews(get_the_ID()); ?>
                            </li>
                         </ul>
                      </div>
@@ -96,4 +96,4 @@ class amar_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Blog );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Blog );

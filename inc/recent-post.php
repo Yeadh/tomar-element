@@ -1,21 +1,21 @@
 <?php
 /**
  * Add Recent Post Widget.
- * @package amar
+ * @package tomar
  */
-if( !class_exists('amar_Recent_Post') ){
-	class amar_Recent_Post extends WP_Widget{
+if( !class_exists('tomar_Recent_Post') ){
+	class tomar_Recent_Post extends WP_Widget{
 		/**
 		 * Register widget with WordPress.
 		 */
 		function __construct(){
 
 			$widget_options = array(
-				'description' 					=> esc_html__('amar recent post here', 'amar'), 
+				'description' 					=> esc_html__('tomar recent post here', 'tomar'), 
 				'customize_selective_refresh' 	=> true,
 			);
 
-			parent:: __construct('amar_Recent_Post', esc_html__( 'Recent Post : amar', 'amar'), $widget_options );
+			parent:: __construct('tomar_Recent_Post', esc_html__( 'Recent Post : tomar', 'tomar'), $widget_options );
 
 		}
 		
@@ -35,7 +35,7 @@ if( !class_exists('amar_Recent_Post') ){
 
 		}
 		
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts','amar' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts','tomar' );
 		
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
@@ -61,7 +61,7 @@ if( !class_exists('amar_Recent_Post') ){
                <?php while($posts->have_posts()) : $posts->the_post();  ?>
 	               	<li>
 	               		<a href="<?php the_permalink(); ?>">
-	                        <?php the_post_thumbnail( 'amar-65-65' ); ?>
+	                        <?php the_post_thumbnail( 'tomar-65-65' ); ?>
 	                        <span><?php echo get_the_date( 'd M Y' ) ?></span><br>
 	                        <p><?php the_title() ?></p>
 	                	</a>
@@ -103,12 +103,12 @@ if( !class_exists('amar_Recent_Post') ){
 		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$show_item    = isset( $instance['show_item'] ) ? absint( $instance['show_item'] ) : 4;
 	?>
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_html__( 'Title:','amar' ); ?></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_html__( 'Title:','tomar' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 		
 		
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id( 'show_item' )); ?>"><?php echo esc_html__( 'No. of Item of posts to show:','amar' ); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id( 'show_item' )); ?>"><?php echo esc_html__( 'No. of Item of posts to show:','tomar' ); ?></label>
 			<input class="tiny-text" id="<?php echo esc_attr(esc_attr($this->get_field_id( 'show_item' ))); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_item' )); ?>" type="number" step="1" min="1" value="<?php echo esc_attr($show_item); ?>" size="3" />
 		</p>
 
@@ -120,7 +120,7 @@ if( !class_exists('amar_Recent_Post') ){
 
 
 // register Contact  Widget widget
-function amar_Recent_Post(){
-	register_widget('amar_Recent_Post');
+function tomar_Recent_Post(){
+	register_widget('tomar_Recent_Post');
 }
-add_action('widgets_init','amar_Recent_Post');
+add_action('widgets_init','tomar_Recent_Post');

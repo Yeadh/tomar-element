@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class amar_Widget_Counter extends Widget_Base {
+class tomar_Widget_Counter extends Widget_Base {
  
    public function get_name() {
       return 'counter';
    }
  
    public function get_title() {
-      return esc_html__( 'Counter', 'amar' );
+      return esc_html__( 'Counter', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_Counter extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_Counter extends Widget_Base {
       $this->start_controls_section(
          'title_section',
          [
-            'label' => esc_html__( 'Counter', 'amar' ),
+            'label' => esc_html__( 'Counter', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class amar_Widget_Counter extends Widget_Base {
       $this->add_control(
          'counter',
          [
-            'label' => __( 'Counter Value', 'amar' ),
+            'label' => __( 'Counter Value', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '445'
          ]
@@ -44,9 +44,9 @@ class amar_Widget_Counter extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Projects done','amar' )
+            'default' => __('Projects done','tomar' )
          ]
       );
       
@@ -76,4 +76,4 @@ class amar_Widget_Counter extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Counter );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Counter );

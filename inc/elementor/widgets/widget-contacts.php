@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // contacts
-class amar_Widget_Contacts extends Widget_Base {
+class tomar_Widget_Contacts extends Widget_Base {
  
    public function get_name() {
       return 'contacts';
    }
  
    public function get_title() {
-      return esc_html__( 'Contacts', 'amar' );
+      return esc_html__( 'Contacts', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_Contacts extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_Contacts extends Widget_Base {
       $this->start_controls_section(
          'contacts_section',
          [
-            'label' => esc_html__( 'contacts Section', 'amar' ),
+            'label' => esc_html__( 'contacts Section', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -36,19 +36,19 @@ class amar_Widget_Contacts extends Widget_Base {
 
       $repeater1->add_control(
          'contact_icon', [
-            'label' => __( 'Contact Icon', 'amar' ),
+            'label' => __( 'Contact Icon', 'tomar' ),
             'type' => \Elementor\Controls_Manager::MEDIA
          ]
       );
       $repeater1->add_control(
          'contact_title', [
-            'label' => __( 'Contact Title', 'amar' ),
+            'label' => __( 'Contact Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
       $repeater1->add_control(
          'contact', [
-            'label' => __( 'Contact', 'amar' ),
+            'label' => __( 'Contact', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -56,7 +56,7 @@ class amar_Widget_Contacts extends Widget_Base {
       $this->add_control(
          'contacts_list',
          [
-            'label' => __( 'Contacts List', 'amar' ),
+            'label' => __( 'Contacts List', 'tomar' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater1->get_controls(),
             'title_field' => 'contacts_list',
@@ -67,7 +67,7 @@ class amar_Widget_Contacts extends Widget_Base {
 
       $repeater->add_control(
          'social', [
-            'label' => __( 'Social', 'amar' ),
+            'label' => __( 'Social', 'tomar' ),
             'type' => \Elementor\Controls_Manager::ICON
          ]
       );
@@ -76,7 +76,7 @@ class amar_Widget_Contacts extends Widget_Base {
       $repeater->add_control(
          'social_url',
          [
-            'label' => __( 'Social URL', 'amar' ),
+            'label' => __( 'Social URL', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -84,7 +84,7 @@ class amar_Widget_Contacts extends Widget_Base {
       $this->add_control(
          'social_list',
          [
-            'label' => __( 'Social List', 'amar' ),
+            'label' => __( 'Social List', 'tomar' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => 'social_list',
@@ -116,7 +116,7 @@ class amar_Widget_Contacts extends Widget_Base {
 
          <ul>
             <li class="list-inline-item">
-               <?php echo esc_html__( "Social media :" , 'amar' ); ?>
+               <?php echo esc_html__( "Social media :" , 'tomar' ); ?>
             </li>
          <?php foreach (  $settings['social_list'] as $social ) { ?>
             <li class="list-inline-item">
@@ -130,4 +130,4 @@ class amar_Widget_Contacts extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Contacts );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Contacts );

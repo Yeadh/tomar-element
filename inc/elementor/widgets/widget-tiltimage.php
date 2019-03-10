@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // aboutme_image
-class amar_Widget_TiltImage extends Widget_Base {
+class tomar_Widget_TiltImage extends Widget_Base {
  
    public function get_name() {
       return 'tiltimage_image';
    }
  
    public function get_title() {
-      return esc_html__( 'Image', 'amar' );
+      return esc_html__( 'Image', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_TiltImage extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_TiltImage extends Widget_Base {
       $this->start_controls_section(
          'aboutme_image_section',
          [
-            'label' => esc_html__( 'Image', 'amar' ),
+            'label' => esc_html__( 'Image', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class amar_Widget_TiltImage extends Widget_Base {
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'amar' ),
+            'label' => __( 'Choose Photo', 'tomar' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -46,10 +46,10 @@ class amar_Widget_TiltImage extends Widget_Base {
       $this->add_control(
          'tilt',
          [
-            'label' => __( 'Tilt Effect', 'amar' ),
+            'label' => __( 'Tilt Effect', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'amar' ),
-            'label_off' => __( 'No', 'amar' ),
+            'label_on' => __( 'Yes', 'tomar' ),
+            'label_off' => __( 'No', 'tomar' ),
             'return_value' => 'yes',
             'default' => 'yes',
          ]
@@ -58,10 +58,10 @@ class amar_Widget_TiltImage extends Widget_Base {
       $this->add_control(
          'shadow',
          [
-            'label' => __( 'Drop shadow', 'amar' ),
+            'label' => __( 'Drop shadow', 'tomar' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'amar' ),
-            'label_off' => __( 'No', 'amar' ),
+            'label_on' => __( 'Yes', 'tomar' ),
+            'label_off' => __( 'No', 'tomar' ),
             'return_value' => 'yes',
             'default' => 'no',
          ]
@@ -90,4 +90,4 @@ class amar_Widget_TiltImage extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_TiltImage );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_TiltImage );

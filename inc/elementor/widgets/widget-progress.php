@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class amar_Widget_Progress extends Widget_Base {
+class tomar_Widget_Progress extends Widget_Base {
  
    public function get_name() {
       return 'progress';
    }
  
    public function get_title() {
-      return esc_html__( 'Progress', 'amar' );
+      return esc_html__( 'Progress', 'tomar' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class amar_Widget_Progress extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'amar-elements' ];
+      return [ 'tomar-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class amar_Widget_Progress extends Widget_Base {
       $this->start_controls_section(
          'title_section',
          [
-            'label' => esc_html__( 'Progress', 'amar' ),
+            'label' => esc_html__( 'Progress', 'tomar' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,16 +35,16 @@ class amar_Widget_Progress extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'amar' ),
+            'label' => __( 'Title', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Bootstrap','amar')
+            'default' => __('Bootstrap','tomar')
          ]
       );
 
       $this->add_control(
          'percent',
          [
-            'label' => __( 'Percent', 'amar' ),
+            'label' => __( 'Percent', 'tomar' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '70'
          ]
@@ -76,4 +76,4 @@ class amar_Widget_Progress extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new amar_Widget_Progress );
+Plugin::instance()->widgets_manager->register_widget_type( new tomar_Widget_Progress );
